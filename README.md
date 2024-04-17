@@ -1,4 +1,4 @@
-# Projekt FRW Obieg
+# Project yii 2
 
 ### Instalacja
 
