@@ -1,0 +1,29 @@
+version: '2'
+services:
+  mysql:
+      image: 'mysql:8.0'
+    #   container_name: 'mhmysql'
+      environment:
+          MYSQL_ROOT_PASSWORD: passwordit
+          MYSQL_PASSWORD: passwordit
+          MYSQL_USER: passwordit
+          MYSQL_DATABASE: frwobieg
+
+      volumes:
+            - "./dumpdb:/docker-entrypoint-initdb.d"
+            - "./docker/etc/mysql/my.cnf:/etc/mysql/conf.d/custom.cnf"
+      ports:
+            - '3306:3306'
+  php:
+        volumes:
+            - "./docker/etc/php/php.ini:/usr/local/etc/php/conf.d/php.ini"
+            - "./:/var/www/html"
+        ports:
+            - "8000:8000"
+        build:
+            context: docker
+            dockerfile: ../docker/Dockerfile
+
+volumes:
+  mysql:
+  php:
