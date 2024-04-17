@@ -1,5 +1,7 @@
 # Project yii 2
 
+![example workflow](https://github.com/dsamsoniuk/yii2_project/actions/workflows/php.yml/badge.svg)
+
 ### Instalacja
 
 1. W katalogu /config/db.php.dist przekopiowac plik na db.php i wpisac wlasna konfoguracje do bazy danych

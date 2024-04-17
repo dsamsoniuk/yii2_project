@@ -4,10 +4,10 @@ services:
       image: 'mysql:8.0'
     #   container_name: 'mhmysql'
       environment:
-          MYSQL_ROOT_PASSWORD: passwordit
-          MYSQL_PASSWORD: passwordit
-          MYSQL_USER: passwordit
-          MYSQL_DATABASE: frwobieg
+          MYSQL_ROOT_PASSWORD: projectyii
+          MYSQL_PASSWORD: projectyii
+          MYSQL_USER: projectyii
+          MYSQL_DATABASE: projectyii
 
       volumes:
             - "./dumpdb:/docker-entrypoint-initdb.d"
